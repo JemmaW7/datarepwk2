@@ -1,0 +1,31 @@
+import logo from './logo.svg';
+import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import NavigationBar from './components/NavigationBar';
+import Header from './components/Header';
+import Content from './components/Content';
+import Footer from './components/Footer';
+
+//importing components from my folder so I can delcare it within app and display these components within the app.
+//wrapping the app in BrowserRouter and using Routes and Route to define different routes for the app..
+//below there is some routing logic. each route link to a different component
+//home link will display content.js
+//Client-side routing
+
+function App() {
+  return (
+    <div className="App">
+      <Router>
+        <NavigationBar />
+        <Routes>
+          <Route path="/home" element={<Content />} />
+          <Route path="/read" element={<h1>Read Component</h1>} />
+          <Route path="/create" element={<h1>Create Component</h1>} />
+        </Routes>
+        <Footer />
+      </Router>
+    </div>
+  );
+}
+
+export default App;
