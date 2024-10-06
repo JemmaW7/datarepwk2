@@ -11,6 +11,8 @@ import Footer from './components/Footer';
 //below there is some routing logic. each route link to a different component
 //home link will display content.js
 //Client-side routing
+//Routers main goal is to supply the browser with an asynchronous URL that corresponds to the data that will show on the web page.
+//It is mainly used to create single-page web apps since it retains the application's regular structure and functionality.
 
 function App() {
   return (
